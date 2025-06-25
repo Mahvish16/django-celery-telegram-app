@@ -1,0 +1,57 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+.Python
+
+# Virtual Environment
+env/
+venv/
+Venv/
+ENV/
+VENV/
+.venv/
+
+# Django
+*.log
+db.sqlite3
+media/
+staticfiles/
+local_settings.py
+
+# Environment Variables
+.env
+.env.*
+
+# Pytest / Unit Test Cache
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+nosetests.xml
+coverage.xml
+*.cover
+
+# Celery
+celerybeat-schedule
+celerybeat.pid
+
+# Redis
+*.rdb
+dump.rdb
+
+# IDEs & Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*.bak
+
+# System
+.DS_Store
+Thumbs.db
+
+# Migrations (optional — if yo
+
