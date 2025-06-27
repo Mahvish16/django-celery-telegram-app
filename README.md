@@ -1,11 +1,9 @@
-
-# 🧠 Django Backend Project – DRF, Celery, Redis, Telegram Bot
+# Django Backend Project – DRF, Celery, Redis, Telegram Bot
 
 A small backend project that demonstrates Django REST Framework APIs, token-based authentication, Celery for background tasks, Redis as a broker, and integration with a Telegram bot. Follows production-level practices using `.env`, `gitignore`, and proper code structure.
 
----
 
-## 🚀 Features
+## Features
 
 - Django + Django REST Framework (DRF)
 - JWT or Token Authentication
@@ -16,9 +14,8 @@ A small backend project that demonstrates Django REST Framework APIs, token-base
 - Web login with Django auth
 - Secure production-ready `.env` setup
 
----
 
-## 🔧 Setup Instructions
+## Setup Instructions
 
 ### 1. Clone the Repo
 
@@ -75,9 +72,7 @@ python manage.py createsuperuser
 python manage.py runserver
 ```
 
----
-
-## 🔌 Celery & Redis Setup
+## Celery & Redis Setup
 
 ### 1. Start Redis Server
 
@@ -95,9 +90,8 @@ celery -A config worker --loglevel=info
 
 > Celery is used to send background tasks like confirmation email on registration.
 
----
 
-## 🤖 Telegram Bot Integration
+## Telegram Bot Integration
 
 1. Create a bot via [BotFather](https://t.me/BotFather) on Telegram  
 2. Add the bot token to `.env` as `TELEGRAM_BOT_TOKEN`  
@@ -109,7 +103,6 @@ python telegram_bot/bot.py
 
 > The bot listens for `/start` command and stores Telegram usernames into the Django DB.
 
----
 
 ## 🧪 API Endpoints
 
@@ -120,9 +113,9 @@ python telegram_bot/bot.py
 | POST   | /api/register/   | Public     | Register a new user              |
 | POST   | /api/login/      | Public     | Login and receive token          |
 
----
 
-## 🔐 Authentication
+
+## Authentication
 
 Use JWT or DRF Token Auth in headers:
 
@@ -138,7 +131,7 @@ Authorization: Token <your_token>
 
 ---
 
-## 📦 Environment Variables
+## Environment Variables
 
 | Variable            | Description                      |
 |---------------------|----------------------------------|
@@ -152,9 +145,8 @@ Authorization: Token <your_token>
 | DB_PORT             | Database port                    |
 | TELEGRAM_BOT_TOKEN  | Token from BotFather             |
 
----
 
-## 📄 Requirements
+## Requirements
 
 Install all Python dependencies using:
 
@@ -174,9 +166,6 @@ redis
 python-telegram-bot
 ```
 
----
-
-
-## 💡 Author
+## Author
 
 Developed by [Mahvish Ruhi]  
