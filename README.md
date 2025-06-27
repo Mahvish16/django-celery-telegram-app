@@ -23,7 +23,7 @@ A small backend project that demonstrates Django REST Framework APIs, token-base
 ### 1. Clone the Repo
 
 ```bash
-git clone https://github.com/your-username/your-repo-name.git
+git clone https://github.com/Mahvish16/django-celery-telegram-app
 cd your-repo-name
 ```
 
