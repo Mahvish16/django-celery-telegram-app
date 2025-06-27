@@ -1,11 +1,14 @@
 import os
 import django
+from dotenv import load_dotenv
 from telegram import Update
 from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes
 from asgiref.sync import sync_to_async
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'Mysite.settings')  
 django.setup()
+
+load_dotenv()
 
 from Demo.models import Telegrambot
 
@@ -27,7 +30,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     )
 
 def main ():
-    application = ApplicationBuilder().token("7210853445:AAFx9C7jllIiQoApUpNhx8cyZcOYRFkCjJg").build()
+    application = ApplicationBuilder().token(os.getenv("TELEGRAM_BOT_TOKEN")).build()
     application.add_handler(CommandHandler("start", start))
     print("Bot is running...")
     application.run_polling()
